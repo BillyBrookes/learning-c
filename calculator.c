@@ -25,7 +25,13 @@ int main(){
             result = a * b;
             break;
         case '/':
-            result = a / b;
+            if (b == 0) {
+                printf("Error: Division by zero is not allowed.\n");
+                return 1;
+            }
+            else {
+                result = a / b;
+            }
             break;
         default:
             printf("Invalid operator\n");
